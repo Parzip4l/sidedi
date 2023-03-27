@@ -82,11 +82,22 @@
           <span class="link-title">Surat Pengantar</span>
         </a>
       </li>
-      <li class="nav-item {{ active_class(['']) }}">
-        <a href="{{ url('/') }}" class="nav-link">
+      <li class="nav-item {{ active_class(['zakat/*']) }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#zakat" role="button" aria-expanded="{{ is_active_route(['zakat/*']) }}" aria-controls="zakat">
           <i class="link-icon" data-feather="dollar-sign"></i>
           <span class="link-title">Zakat</span>
+          <i class="link-arrow" data-feather="chevron-down"></i>
         </a>
+        <div class="collapse {{ show_class(['zakat/*']) }}" id="zakat">
+          <ul class="nav sub-menu">
+            <li class="nav-item">
+              <a href="{{ url('/zakat') }}" class="nav-link {{ active_class(['zakat']) }}">Penitipan Zakat</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/mustahiq') }}" class="nav-link {{ active_class(['mustahiq']) }}">Penyaluran Zakat</a>
+            </li>
+          </ul>
+        </div>
       </li>
       
       <li class="nav-item nav-category">Additional Information</li>
@@ -113,6 +124,21 @@
         <i class="link-icon" data-feather="activity"></i>
           <span class="link-title">Polling</span>
         </a>
+      </li>
+      <li class="nav-item nav-category">Laporan</li>
+      <li class="nav-item {{ active_class(['reports/*']) }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#reports" role="button" aria-expanded="{{ is_active_route(['reports/*']) }}" aria-controls="reports">
+          <i class="link-icon" data-feather="file"></i>
+          <span class="link-title">Report</span>
+          <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse {{ show_class(['reports/*']) }}" id="reports">
+          <ul class="nav sub-menu">
+            <li class="nav-item">
+              <a href="{{ url('/laporanzakat') }}" class="nav-link {{ active_class(['laporanzakat']) }}">Zakat</a>
+            </li>
+          </ul>
+        </div>
       </li>
       <li class="nav-item nav-category">Settings</li>
       <li class="nav-item {{ active_class(['settings']) }}">

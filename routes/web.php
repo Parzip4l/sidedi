@@ -11,6 +11,11 @@
 |
 */
 
+use Dompdf\Dompdf;
+use Illuminate\Support\Facades\View;
+
+Route::get('/pdflaporan', [\App\Http\Controllers\LaporanzakatController::class, 'generatePdf']);
+
 Route::get('/', function () {
     return view('pages.auth.login');
 });
@@ -30,17 +35,25 @@ Route::group(['prefix' => 'apps'], function(){
     Route::get('calendar', function () { return view('pages.apps.calendar'); });
 });
 
+Route::get('/laporanzakatwarga', 'LaporanzakatController@indexwarga');
+
 Route::resource('/wargas', \App\Http\Controllers\WargaController::class);
 Route::resource('/pengumuman', \App\Http\Controllers\PengumumanController::class);
 Route::resource('/berita', \App\Http\Controllers\BeritaController::class);
 Route::resource('/pengaduan', \App\Http\Controllers\PengaduanController::class);
+Route::resource('/zakat', \App\Http\Controllers\ZakatController::class);
+Route::resource('/mustahiq', \App\Http\Controllers\MustahiqController::class);
+Route::resource('/laporanzakat', \App\Http\Controllers\LaporanzakatController::class);
 Route::get('wargadashboard', function () { return view('clients.index'); });
 Route::get('myprofile', function () { return view('clients.profile'); });
 Route::get('pengaduanwarga', function () { return view('pages.pengaduan.clients'); });
 Route::get('mynotifications', function () { return view('clients.notifikasi'); });
-Route::get('pengumuman/{id}/download', 'PengumumanController@download')->name('pengumuman.download');
-Route::get('/berita/{id}', [BeritaController::class, 'show'])->name('berita.show');
+Route::get('mynotifications', function () { return view('clients.notifikasi'); });
+Route::get('termsandconditions', function () { return view('pages.general.terms'); });
+Route::get('privacyandsafety', function () { return view('pages.general.privacy'); });
 
+Route::get('pengumuman/{id}/download', 'PengumumanController@download')->name('pengumuman.download');
+Route::get('/berita/{id}', 'BeritaController@show')->name('berita.show');
 Route::get('/pengaduan/{id}', 'PengaduanController@show')->name('pengaduan.show');
 
 

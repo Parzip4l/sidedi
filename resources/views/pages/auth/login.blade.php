@@ -14,12 +14,12 @@
               <form class="forms-sample" action="{{url('login/proses')}}" method="POST">
                 @csrf
                 <div class="mb-3">
-                  <label for="userEmail" class="form-label">Email address</label>
-                  <input autofocus type="email" class="form-control 
-                  @error('username')
+                  <label for="userEmail" class="form-label">NIK</label>
+                  <input autofocus type="number" class="form-control 
+                  @error('nik')
                     is-invalid
                   @enderror
-                  " id="userEmail" placeholder="email" name="email">
+                  " id="userEmail" placeholder="321115XXXXXX" name="nik">
                 </div>
 
                 @error('username')

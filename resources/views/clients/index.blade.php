@@ -97,12 +97,12 @@
                             <p>Berita Online</p>
                         </div>
                         <div class="warga-menu">
-                            <a href="">
+                            <a href="{{ url('/laporanzakatwarga') }}">
                                 <div class="image-fitur">
                                     <img src="{{ asset('assets/icons/service-10.svg') }}" alt="">
                                 </div>
                             </a>
-                            <p>Layanan Zakat</p>
+                            <p>Laporan Zakat</p>
                         </div>
                     </div>
                 </div>

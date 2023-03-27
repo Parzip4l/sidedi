@@ -133,10 +133,10 @@
                             <h6>1.0.0</h6>
                         </div>
                         <div class="item-profile py-2">
-                            <p class="text-abu title-profile">Terms and Conditions</p>
+                            <a href="{{ url('/termsandconditions') }}"><p class="text-abu title-profile">Terms and Conditions</p></a>
                         </div>
                         <div class="item-profile py-2">
-                            <p class="text-abu title-profile">Safety & Privacy</p>
+                            <a href="{{ url('/privacyandsafety') }}"><p class="text-abu title-profile">Safety & Privacy</p></a>
                         </div>
                     </div>
                 </div>
