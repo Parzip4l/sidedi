@@ -24,11 +24,11 @@ class LoginController extends Controller
     public function proses(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'nik' => 'required',
             'password' => 'required',
         ]);
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('nik', 'password');
 
         if (Auth::attempt($credentials)) {
            $request->session()->regenerate();
@@ -42,8 +42,8 @@ class LoginController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'email Atau Password Salah'
-        ])->onlyInput('email');
+            'nik' => 'nik Atau Password Salah'
+        ])->onlyInput('nik');
     }
 
     public function logout(Request $request)

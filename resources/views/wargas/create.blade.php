@@ -61,10 +61,26 @@
           </div>
 
           <div class="mb-3">
+            <label for="exampleInputEmail3" class="form-label">Hubungan Dengan Kepala Keluarga</label>
+            <select name="hubungankk" class="form-control">
+                <option value="Kepala Keluarga">Kepala Keluarga</option>
+                <option value="Istri">Istri</option>
+                <option value="Anak">Anak</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
             <label for="exampleInputEmail3" class="form-label">Agama</label>
             <select name="agama" class="form-control">
                 <option value="ISLAM">ISLAM</option>
                 <option value="KRISTEN">KRISTEN</option>
+                <option value="KRISTEN">KRISTEN</option>
+                <option value="KATHOLIK">KATHOLIK</option>
+                <option value="HINDU">HINDU</option>
+                <option value="BUDHA">BUDHA</option>
+                <option value="KHONGHUCU">KHONGHUCU</option>
+                <option value="PENGHAYAT KEPERCAYAAN">PENGHAYAT KEPERCAYAAN</option>
             </select>
           </div>
           <input type="hidden" name="level" value="2">
@@ -72,18 +88,32 @@
           <div class="mb-3">
             <label for="exampleInputEmail3" class="form-label">Pendidikan</label>
             <select name="pendidikan" class="form-control">
-                <option value="SD">SD</option>
-                <option value="SMP">SMP</option>
-                <option value="SMA">SMA</option>
-                <option value="SMK">SMK</option>
+                <option value="Tidak/Belum Sekolah">Tidak/Belum Sekolah</option>
+                <option value="Tidak Tamat SD/Sederajat">Tidak Tamat SD/Sederajat</option>
+                <option value="Masih SD/Sederajat">Masih SD/Sederajat</option>
+                <option value="Tamat SD/Sederajat">Tamat SD/Sederajat</option>
+                <option value="Masih SLTP/Sederajat">Masih SLTP/Sederajat</option>
+                <option value="Tamat SLTP/Sedejerat">Tamat SLTP/Sedejerat</option>
+                <option value="Masih SLTA/Sederajat">Masih SLTA/Sederajat</option>
+                <option value="Tamat SLTA/Sederajat">Tamat SLTA/Sederajat</option>
+                <option value="Masih PT/Akademi">Masih PT/Akademi</option>
+                <option value="Tamat PT/Akademi">Tamat PT/Akademi</option>
             </select>
           </div>
 
           <div class="mb-3">
             <label for="exampleInputEmail3" class="form-label">Pekerjaan</label>
             <select name="pekerjaan" class="form-control">
-                <option value="PENGUSAHA">PENGUSAHA</option>
-                <option value="KARYAWAN SWASTA">KARYAWAN SWASTA</option>
+                <option value="Tidak/Belum Bekerja">Tidak/Belum Bekerja</option>
+                <option value="Petani">Petani</option>
+                <option value="Nelayan">Nelayan</option>
+                <option value="Pedagang">Pedagang</option>
+                <option value="Pejabat Negara">Pejabat Negara</option>
+                <option value="PNS/TNI/POLRI">PNS/TNI/POLRI</option>
+                <option value="Pegawai Swasta">Pegawai Swasta</option>
+                <option value="Wiraswasta">Wiraswasta</option>
+                <option value="Pensiunan">Pensiunan</option>
+                <option value="Pekerja Lepas">Pekerja Lepas</option>
             </select>
           </div>
 
@@ -100,8 +130,10 @@
           <div class="mb-3">
             <label for="exampleInputEmail3" class="form-label">Status Perkawinan</label>
             <select name="statusperkawinan" class="form-control">
-                <option value="MENIKAH">MENIKAH</option>
-                <option value="BELUM MENIKAH">BELUM MENIKAH</option>
+                <option value="Kawin">Kawin</option>
+                <option value="Belum Kawin">Belum Kawin</option>
+                <option value="Cerai Hidup">Cerai Hidup</option>
+                <option value="Cerai Mati">Cerai Mati</option>
             </select>
           </div>
 

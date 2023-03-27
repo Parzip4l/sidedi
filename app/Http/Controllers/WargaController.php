@@ -65,6 +65,7 @@ class WargaController extends Controller
             'rw'   => $request->rw,
             'nama'     => $request->nama,
             'jk'   => $request->jk,
+            'hubungankk'   => $request->hubungankk,
             'agama'     => $request->agama,
             'pendidikan'   => $request->pendidikan,
             'pekerjaan'     => $request->pekerjaan,
